@@ -29,11 +29,3 @@
   for = "/*.html"
   [headers.values]
     Cache-Control = "public, max-age=3600"
-
-# Form handling - simplified for static site
-[build.processing]
-  skip_processing = false
-
-# Skip bundling for static site to avoid module resolution errors
-[build.processing.skip_processing]
-  paths = ["/assets/**", "/*.js", "/*.css"]
