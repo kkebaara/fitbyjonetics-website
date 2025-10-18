@@ -2,9 +2,6 @@
   publish = "."
   command = "echo 'Static site - no build required'"
 
-[build.environment]
-  NODE_VERSION = "18"
-
 # Redirect rules for SPA-like behavior
 [[redirects]]
   from = "/*"
@@ -33,22 +30,10 @@
   [headers.values]
     Cache-Control = "public, max-age=3600"
 
-# Form handling
+# Form handling - simplified for static site
 [build.processing]
   skip_processing = false
 
-[build.processing.css]
-  bundle = true
-  minify = true
-
-[build.processing.js]
-  bundle = true
-  minify = true
-
-[build.processing.html]
-  pretty_urls = true
-  minify = true
-
-# Netlify Forms configuration
+# Skip bundling for static site to avoid module resolution errors
 [build.processing.skip_processing]
-  paths = ["/assets/**"]
+  paths = ["/assets/**", "/*.js", "/*.css"]
