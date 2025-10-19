@@ -11,10 +11,16 @@
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
     
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="styles/main.css">
     
     <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="assets/images/icon.png" as="image">
+    <link rel="preload" href="assets/images/jones-background.png" as="image">
     
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Fit By Jonetics - Your Complete Fitness Companion">
@@ -40,12 +46,10 @@
             <div class="nav-menu" id="nav-menu">
                 <a href="#home" class="nav-link">Home</a>
                 <a href="#features" class="nav-link">Features</a>
-                <a href="#workouts" class="nav-link">Workouts</a>
-                <a href="#nutrition" class="nav-link">Nutrition</a>
+                <a href="#programs" class="nav-link">Programs</a>
                 <a href="#about" class="nav-link">About</a>
                 <a href="#contact" class="nav-link">Contact</a>
-                <a href="delete-account.html" class="nav-link">Delete Account</a>
-                <a href="data-deletion.html" class="nav-link data-deletion-nav-link">🗑️ Delete Data</a>
+                <a href="pages/data-deletion.html" class="nav-link data-deletion-nav-link">🗑️ Data Deletion</a>
             </div>
             <div class="nav-toggle" id="nav-toggle">
                 <span class="bar"></span>
@@ -58,7 +62,7 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-background">
-            <img src="assets/images/jones-background.png" alt="Fitness Background" class="hero-bg-img">
+            <img src="assets/images/jones-background.png" alt="Fitness Background" class="hero-bg-img" loading="eager">
         </div>
         <div class="hero-content">
             <div class="hero-text">
@@ -70,7 +74,7 @@
                 </div>
             </div>
             <div class="hero-image">
-                <img src="assets/images/pages/Homepage.png" alt="Fit By Jonetics App" class="hero-app-img">
+                <img src="assets/images/pages/Homepage.png" alt="Fit By Jonetics App" class="hero-app-img" loading="eager">
             </div>
         </div>
     </section>
@@ -85,28 +89,28 @@
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <img src="assets/images/workout-categories/pushups.png" alt="Workout Tracking" class="feature-img">
+                        <img src="assets/images/workout-categories/pushups.png" alt="Workout Tracking" class="feature-img" loading="lazy">
                     </div>
                     <h3 class="feature-title">Workout Tracking</h3>
                     <p class="feature-description">Log exercises, track progress, and access 831+ pre-defined exercises across 5 categories: Glutes, Strength, HIIT, Functional Training, and Cardio.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <img src="assets/images/workout-categories/yoga.png" alt="Nutrition Tracking" class="feature-img">
+                        <img src="assets/images/workout-categories/yoga.png" alt="Nutrition Tracking" class="feature-img" loading="lazy">
                     </div>
                     <h3 class="feature-title">Nutrition Tracking</h3>
                     <p class="feature-description">Monitor your daily nutrition with barcode scanning, AI-powered food recognition, and comprehensive macro tracking.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <img src="assets/images/workout-categories/SquatMovement.png" alt="Progress Analytics" class="feature-img">
+                        <img src="assets/images/workout-categories/SquatMovement.png" alt="Progress Analytics" class="feature-img" loading="lazy">
                     </div>
                     <h3 class="feature-title">Progress Analytics</h3>
                     <p class="feature-description">Advanced analytics with real-time data synchronization, progress monitoring, and personalized insights.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <img src="assets/images/workout-categories/bodyStreching.png" alt="Personalized Workouts" class="feature-img">
+                        <img src="assets/images/workout-categories/bodyStreching.png" alt="Personalized Workouts" class="feature-img" loading="lazy">
                     </div>
                     <h3 class="feature-title">Personalized Workouts</h3>
                     <p class="feature-description">AI-powered workout generation tailored to your fitness level, goals, and preferences.</p>
@@ -115,87 +119,48 @@
         </div>
     </section>
 
-    <!-- Workouts Section -->
-    <section id="workouts" class="workouts">
+    <!-- Programs Section -->
+    <section id="programs" class="programs">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Workout Categories</h2>
+                <h2 class="section-title">Fitness Programs</h2>
                 <p class="section-subtitle">Choose from our comprehensive exercise database</p>
             </div>
-            <div class="workout-categories">
-                <div class="workout-category">
+            <div class="program-categories">
+                <div class="program-category">
                     <div class="category-image">
-                        <img src="assets/images/workout-categories/SquatMovement.png" alt="Glutes Workouts" class="category-img">
+                        <img src="assets/images/workout-categories/SquatMovement.png" alt="Glutes Workouts" class="category-img" loading="lazy">
                     </div>
                     <h3 class="category-title">Glutes</h3>
                     <p class="category-description">Target your glutes with specialized exercises designed to build strength and definition.</p>
                 </div>
-                <div class="workout-category">
+                <div class="program-category">
                     <div class="category-image">
-                        <img src="assets/images/workout-categories/pushups.png" alt="Strength Training" class="category-img">
+                        <img src="assets/images/workout-categories/pushups.png" alt="Strength Training" class="category-img" loading="lazy">
                     </div>
                     <h3 class="category-title">Strength</h3>
                     <p class="category-description">Build muscle and increase strength with our comprehensive strength training exercises.</p>
                 </div>
-                <div class="workout-category">
+                <div class="program-category">
                     <div class="category-image">
-                        <img src="assets/images/workout-categories/SquatMovement.png" alt="HIIT Workouts" class="category-img">
+                        <img src="assets/images/workout-categories/SquatMovement.png" alt="HIIT Workouts" class="category-img" loading="lazy">
                     </div>
                     <h3 class="category-title">HIIT</h3>
                     <p class="category-description">High-intensity interval training to maximize calorie burn and improve cardiovascular fitness.</p>
                 </div>
-                <div class="workout-category">
+                <div class="program-category">
                     <div class="category-image">
-                        <img src="assets/images/workout-categories/yoga.png" alt="Functional Training" class="category-img">
+                        <img src="assets/images/workout-categories/yoga.png" alt="Functional Training" class="category-img" loading="lazy">
                     </div>
                     <h3 class="category-title">Functional Training</h3>
                     <p class="category-description">Improve daily movement patterns with functional exercises that enhance real-world performance.</p>
                 </div>
-                <div class="workout-category">
+                <div class="program-category">
                     <div class="category-image">
-                        <img src="assets/images/workout-categories/bodyStreching.png" alt="Cardio Workouts" class="category-img">
+                        <img src="assets/images/workout-categories/bodyStreching.png" alt="Cardio Workouts" class="category-img" loading="lazy">
                     </div>
                     <h3 class="category-title">Cardio</h3>
                     <p class="category-description">Boost your heart health and endurance with our diverse cardio exercise selection.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Nutrition Section -->
-    <section id="nutrition" class="nutrition">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Smart Nutrition Tracking</h2>
-                <p class="section-subtitle">Take control of your nutrition with AI-powered food recognition and comprehensive tracking</p>
-            </div>
-            <div class="nutrition-features">
-                <div class="nutrition-feature">
-                    <div class="feature-content">
-                        <h3 class="feature-title">Barcode Scanning</h3>
-                        <p class="feature-description">Quickly log food items by scanning barcodes for instant nutritional information.</p>
-                    </div>
-                    <div class="feature-image">
-                        <img src="assets/images/pages/Homepage.png" alt="Barcode Scanning" class="nutrition-img">
-                    </div>
-                </div>
-                <div class="nutrition-feature">
-                    <div class="feature-content">
-                        <h3 class="feature-title">AI Food Recognition</h3>
-                        <p class="feature-description">Take a photo of your meal and let our AI identify and log the nutritional content automatically.</p>
-                    </div>
-                    <div class="feature-image">
-                        <img src="assets/images/pages/Homepage.png" alt="AI Food Recognition" class="nutrition-img">
-                    </div>
-                </div>
-                <div class="nutrition-feature">
-                    <div class="feature-content">
-                        <h3 class="feature-title">Macro Tracking</h3>
-                        <p class="feature-description">Monitor your daily macronutrients with detailed breakdowns of carbs, proteins, and fats.</p>
-                    </div>
-                    <div class="feature-image">
-                        <img src="assets/images/pages/Homepage.png" alt="Macro Tracking" class="nutrition-img">
-                    </div>
                 </div>
             </div>
         </div>
@@ -226,7 +191,7 @@
                     </div>
                 </div>
                 <div class="about-image">
-                    <img src="assets/images/pages/Profile.png" alt="Fit By Jonetics Profile" class="about-img">
+                    <img src="assets/images/pages/Profile.png" alt="Fit By Jonetics Profile" class="about-img" loading="lazy">
                 </div>
             </div>
         </div>
@@ -281,38 +246,6 @@
         </div>
     </section>
 
-    <!-- Data Deletion Section -->
-    <section class="data-deletion-section">
-        <div class="container">
-            <h2>🗑️ Request Data Deletion</h2>
-            <p>Need to delete your personal data? We make it easy to request deletion of your information.</p>
-            
-            <div class="deletion-options">
-                <div class="deletion-option">
-                    <h3>📝 Online Form</h3>
-                    <p>Use our secure online form to request data deletion. Fastest and most convenient method.</p>
-                    <a href="data-deletion.html" class="btn btn-primary">Request Data Deletion</a>
-                </div>
-                
-                <div class="deletion-option">
-                    <h3>📧 Email Request</h3>
-                    <p>Send us an email with your deletion request. Include your account details for faster processing.</p>
-                    <a href="mailto:info@fitbyjonetics.com?subject=Data Deletion Request" class="btn btn-secondary">Send Email</a>
-                </div>
-            </div>
-            
-            <div class="deletion-info">
-                <h3>What You Need to Know</h3>
-                <ul>
-                    <li><strong>Processing Time:</strong> 7 business days</li>
-                    <li><strong>Verification:</strong> We may need to verify your identity</li>
-                    <li><strong>Permanent:</strong> Deleted data cannot be recovered</li>
-                    <li><strong>Partial Deletion:</strong> You can request specific data types</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -324,13 +257,11 @@
                 <div class="footer-links">
                     <a href="#home" class="footer-link">Home</a>
                     <a href="#features" class="footer-link">Features</a>
-                    <a href="#workouts" class="footer-link">Workouts</a>
-                    <a href="#nutrition" class="footer-link">Nutrition</a>
+                    <a href="#programs" class="footer-link">Programs</a>
                     <a href="#about" class="footer-link">About</a>
                     <a href="#contact" class="footer-link">Contact</a>
-                    <a href="delete-account.html" class="footer-link">Delete Account</a>
-                    <a href="data-deletion.html" class="footer-link data-deletion-link">🗑️ Request Data Deletion</a>
-                    <a href="https://www.privacypolicies.com/live/4283cd0e-2d2c-4be0-b577-86e8731c737c" class="footer-link" target="_blank">Privacy Policy</a>
+                    <a href="pages/data-deletion.html" class="footer-link data-deletion-link">🗑️ Data Deletion</a>
+                    <a href="pages/privacy-policy.html" class="footer-link">Privacy Policy</a>
                 </div>
                 <div class="footer-contact">
                     <p>Email: <a href="mailto:info@fitbyjonetics.com">info@fitbyjonetics.com</a></p>
@@ -340,8 +271,8 @@
                 <div class="footer-bottom-content">
                     <p>&copy; 2025 <a href="https://fitbyjonetics.com" target="_blank">Fit By Jonetics, LLC</a>. All rights reserved. Website by <a href="https://mononymdigital.com" target="_blank">Mononym Digital, LLC</a>.</p>
                     <div class="footer-links">
-                        <a href="https://www.privacypolicies.com/live/4283cd0e-2d2c-4be0-b577-86e8731c737c" class="footer-link" target="_blank">Privacy</a>
-                        <a href="data-deletion.html" class="footer-link data-deletion-link">Request Data Deletion</a>
+                        <a href="pages/privacy-policy.html" class="footer-link">Privacy</a>
+                        <a href="pages/data-deletion.html" class="footer-link data-deletion-link">Data Deletion</a>
                     </div>
                 </div>
             </div>
