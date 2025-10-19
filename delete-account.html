@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Account - Fit By Jonetics</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 40px 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 12px;
+        }
+        
+        .warning-section {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .warning-icon {
+            font-size: 48px;
+            color: #dc3545;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        
+        .warning-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #dc3545;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        
+        .warning-list {
+            margin: 15px 0;
+        }
+        
+        .warning-list li {
+            margin: 8px 0;
+        }
+        
+        .options-section {
+            margin: 30px 0;
+        }
+        
+        .option-card {
+            background: white;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .option-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .option-icon {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+        
+        .option-title {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        .option-description {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .option-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .option-time {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        
+        .btn:hover {
+            background: #0056b3;
+        }
+        
+        .btn-danger {
+            background: #dc3545;
+        }
+        
+        .btn-danger:hover {
+            background: #c82333;
+        }
+        
+        .support-section {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .legal-section {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 30px;
+            font-size: 14px;
+            color: #666;
+            text-align: center;
+        }
+        
+        .app-link {
+            background: #28a745;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        
+        .app-link:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Delete Your Account</h1>
+            <p>Request deletion of your Fit By Jonetics account and all associated data</p>
+        </div>
+
+        <!-- Warning Section -->
+        <div class="warning-section">
+            <div class="warning-icon">⚠️</div>
+            <h2 class="warning-title">Account Deletion Warning</h2>
+            <p><strong>Deleting your account will permanently remove:</strong></p>
+            <ul class="warning-list">
+                <li>All your workout data and progress</li>
+                <li>All your nutrition logs and meal history</li>
+                <li>All your step tracking and fitness data</li>
+                <li>Your profile and personal information</li>
+                <li>All achievements and streaks</li>
+            </ul>
+            <p style="color: #dc3545; font-weight: bold; text-align: center; margin-top: 15px;">
+                This action cannot be undone.
+            </p>
+        </div>
+
+        <!-- App Users -->
+        <div class="options-section">
+            <h2>App Users</h2>
+            <p>If you're using the Fit By Jonetics mobile app, you can delete your account directly from the app:</p>
+            
+            <div class="option-card">
+                <div class="option-header">
+                    <span class="option-icon">📱</span>
+                    <h3 class="option-title">Delete from App</h3>
+                </div>
+                <p class="option-description">
+                    Open the Fit By Jonetics app and go to Profile → Help → Request Account Deletion for immediate deletion options.
+                </p>
+                <div class="option-footer">
+                    <span class="option-time">Deleted immediately</span>
+                    <a href="fitbyjonetics://delete-account" class="app-link">Open App</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Web Users -->
+        <div class="options-section">
+            <h2>Request Account Deletion</h2>
+            <p>Choose how you'd like to request account deletion:</p>
+
+            <div class="option-card">
+                <div class="option-header">
+                    <span class="option-icon">📧</span>
+                    <h3 class="option-title">Email Request</h3>
+                </div>
+                <p class="option-description">
+                    Send an email to our support team. We'll process your request within 24-48 hours.
+                </p>
+                <div class="option-footer">
+                    <span class="option-time">Processed within 24-48 hours</span>
+                    <a href="mailto:support@fitbyjonetics.com?subject=Account Deletion Request&body=Please delete my account and all associated data. I understand this action is permanent and cannot be undone." class="btn">Send Email</a>
+                </div>
+            </div>
+
+            <div class="option-card">
+                <div class="option-header">
+                    <span class="option-icon">🌐</span>
+                    <h3 class="option-title">Contact Form</h3>
+                </div>
+                <p class="option-description">
+                    Use our contact form to request account deletion. Include your email address and request account deletion.
+                </p>
+                <div class="option-footer">
+                    <span class="option-time">Processed within 24-48 hours</span>
+                    <a href="mailto:support@fitbyjonetics.com" class="btn">Contact Support</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Support Section -->
+        <div class="support-section">
+            <h2>Need Help?</h2>
+            <p>If you have questions about account deletion or need assistance, please contact our support team.</p>
+            <a href="mailto:support@fitbyjonetics.com" class="btn">Contact Support</a>
+        </div>
+
+        <!-- Legal Information -->
+        <div class="legal-section">
+            <p><strong>Legal Notice:</strong> By requesting account deletion, you acknowledge that this action is permanent and cannot be undone. All your data will be permanently removed from our systems within 30 days of your request.</p>
+        </div>
+    </div>
+</body>
+</html>
