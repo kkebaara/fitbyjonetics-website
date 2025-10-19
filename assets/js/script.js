@@ -374,7 +374,7 @@ document.addEventListener('DOMContentLoaded', function() {
     images.forEach(img => {
         img.addEventListener('error', function() {
             this.style.display = 'none';
-            console.warn('Failed to load image:', this.src);
+            // Image failed to load - handled gracefully
         });
     });
 });
@@ -387,12 +387,8 @@ function measurePerformance() {
                 const perfData = performance.getEntriesByType('navigation')[0];
                 const loadTime = perfData.loadEventEnd - perfData.loadEventStart;
                 
-                console.log(`%c⚡ Page loaded in ${loadTime.toFixed(2)}ms`, 'color: #27ae60; font-weight: bold;');
-                
-                // Log Core Web Vitals if available
-                if ('web-vital' in window) {
-                    console.log('%c📊 Core Web Vitals monitoring enabled', 'color: #2f95dc;');
-                }
+                // Page load time: ${loadTime.toFixed(2)}ms
+                // Core Web Vitals monitoring available
             }, 0);
         });
     }
@@ -405,11 +401,10 @@ measurePerformance();
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
         // Note: Service worker would need to be created separately
-        console.log('%c🔧 Service Worker support detected', 'color: #2f95dc;');
+        // Service Worker support detected
     });
 }
 
-// Console welcome message
-console.log('%c🏋️ Welcome to Fit By Jonetics!', 'color: #2f95dc; font-size: 20px; font-weight: bold;');
-console.log('%cTransform your fitness journey with our comprehensive tracking app.', 'color: #666; font-size: 14px;');
-console.log('%c✨ Enhanced with modern web technologies for optimal performance.', 'color: #27ae60; font-size: 12px;');
+// Welcome to Fit By Jonetics!
+// Transform your fitness journey with our comprehensive tracking app.
+// Enhanced with modern web technologies for optimal performance.

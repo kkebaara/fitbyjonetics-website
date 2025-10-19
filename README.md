@@ -30,18 +30,22 @@ A static website for Fit By Jonetics - a comprehensive fitness tracking applicat
 fitbyjonetics-website/
 ├── index.html              # Main homepage
 ├── assets/
-│   ├── css/
-│   │   └── style.css       # Main stylesheet
-│   ├── js/
-│   │   └── script.js       # JavaScript functionality
-│   └── images/             # All website images
-│       ├── icon.png        # App icon
-│       ├── favicon.png     # Favicon
-│       ├── splash-screen.png
-│       ├── jones-background.png
-│       ├── get-started-bg.png
-│       ├── workout-categories/  # Workout category images
-│       └── pages/          # App screenshots
+│   ├── images/             # All website images
+│   │   ├── icon.png        # App icon
+│   │   ├── favicon.png     # Favicon
+│   │   ├── splash-screen.png
+│   │   ├── jones-background.png
+│   │   ├── get-started-bg.png
+│   │   ├── workout-categories/  # Workout category images
+│   │   └── pages/          # App screenshots
+│   └── js/
+│       └── script.js       # JavaScript functionality
+├── styles/
+│   └── main.css            # Main stylesheet
+├── account-deletion.html   # Account deletion page
+├── privacy-policy.html     # Privacy policy
+├── terms-of-service.html   # Terms of service
+├── cookie-policy.html      # Cookie policy
 ├── netlify.toml            # Netlify configuration
 ├── robots.txt              # SEO robots file
 ├── sitemap.xml            # SEO sitemap
