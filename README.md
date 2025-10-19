@@ -224,6 +224,27 @@ This website is created for Fit By Jonetics. All rights reserved.
 
 ---
 
-**Last Updated**: January 2024  
-**Version**: 1.0.0  
+**Last Updated**: January 2025  
+**Version**: 2.0.0  
 **Maintained by**: Fit By Jonetics Team
+
+## 🔄 Recent Updates (v2.0.0)
+
+### Major Refactoring
+- **Simplified URL Structure**: Removed `/pages/` directory for cleaner URLs
+- **Unified Deletion System**: Consolidated all deletion options into single page
+- **Enhanced Legal Compliance**: Added Terms of Service and Cookie Policy
+- **Improved Documentation**: Consolidated redundant documentation files
+- **Code Cleanup**: Removed console logs and optimized JavaScript
+
+### New Features
+- **Account Deletion Page**: Unified soft/hard/partial deletion options
+- **Terms of Service**: Comprehensive legal terms and conditions
+- **Cookie Policy**: Detailed cookie usage and management
+- **Mobile App Integration**: Clear instructions for app-based deletion
+
+### Technical Improvements
+- **Performance**: Removed console logs from production code
+- **SEO**: Updated sitemap with new pages and priorities
+- **Maintenance**: Added .gitignore for better repository management
+- **Structure**: Cleaner file organization and reduced redundancy
