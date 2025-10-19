@@ -1052,3 +1052,144 @@ textarea:focus {
         border: 2px solid #000;
     }
 }
+
+/* Data deletion link styles */
+.data-deletion-link {
+    color: #dc3545 !important;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1px solid #dc3545;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.data-deletion-link:hover {
+    background-color: #dc3545;
+    color: white !important;
+}
+
+.data-deletion-nav-link {
+    color: #dc3545 !important;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1px solid #dc3545;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    margin-left: 10px;
+}
+
+.data-deletion-nav-link:hover {
+    background-color: #dc3545;
+    color: white !important;
+}
+
+.footer-bottom {
+    border-top: 1px solid #e9ecef;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+.footer-bottom-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-bottom .footer-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .footer-bottom-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-bottom .footer-links {
+        justify-content: center;
+    }
+}
+
+/* Data deletion section styles */
+.data-deletion-section {
+    background: #f8f9fa;
+    padding: 40px 0;
+    margin: 40px 0;
+    border-radius: 8px;
+}
+
+.data-deletion-section h2 {
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.data-deletion-section p {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.deletion-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.deletion-option {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.deletion-option h3 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.deletion-option p {
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.deletion-info {
+    background: #e3f2fd;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #2196f3;
+}
+
+.deletion-info h3 {
+    color: #1976d2;
+    margin-bottom: 15px;
+}
+
+.deletion-info ul {
+    margin-left: 20px;
+}
+
+.deletion-info li {
+    margin: 8px 0;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .deletion-options {
+        grid-template-columns: 1fr;
+    }
+    
+    .deletion-option {
+        padding: 20px;
+    }
+}

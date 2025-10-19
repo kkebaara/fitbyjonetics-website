@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Data Deletion - Fit By Jonetics</title>
+    <meta name="description" content="Request deletion of your personal data from Fit By Jonetics. Submit a data deletion request form.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 40px 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 12px;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .info-section {
+            background: #e3f2fd;
+            border: 1px solid #bbdefb;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-section h2 {
+            color: #1976d2;
+            margin-bottom: 15px;
+        }
+        
+        .info-section ul {
+            margin-left: 20px;
+        }
+        
+        .info-section li {
+            margin: 8px 0;
+        }
+        
+        .form-section {
+            background: white;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .required {
+            color: #dc3545;
+        }
+        
+        .btn {
+            background: #667eea;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .btn:hover {
+            background: #5a6fd8;
+        }
+        
+        .btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .confirmation {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: none;
+        }
+        
+        .error {
+            background: #f8d7da;
+            border: 1px solid #f5c6cb;
+            color: #721c24;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: none;
+        }
+        
+        .processing-info {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 30px;
+        }
+        
+        .processing-info h3 {
+            color: #856404;
+            margin-bottom: 10px;
+        }
+        
+        .contact-info {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 30px;
+            text-align: center;
+        }
+        
+        .contact-info a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 20px 0;
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .data-types {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .data-types h3 {
+            margin-bottom: 15px;
+        }
+        
+        .data-types ul {
+            margin-left: 20px;
+        }
+        
+        .data-types li {
+            margin: 5px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .form-section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Request Data Deletion</h1>
+            <p>Submit a request to delete your personal data from Fit By Jonetics</p>
+        </div>
+
+        <!-- Confirmation Message -->
+        <div class="confirmation" id="confirmation">
+            <h3>✅ Request Submitted Successfully</h3>
+            <p>Thank you for your data deletion request. We have received your submission and will process it within 7 business days.</p>
+            <p><strong>What happens next:</strong></p>
+            <ul>
+                <li>You will receive a confirmation email within 24 hours</li>
+                <li>We will review your request and verify your identity</li>
+                <li>Your data will be permanently deleted within 7 business days</li>
+                <li>You will receive a final confirmation once the deletion is complete</li>
+            </ul>
+        </div>
+
+        <!-- Error Message -->
+        <div class="error" id="error">
+            <h3>❌ Error Submitting Request</h3>
+            <p>There was an error submitting your request. Please try again or contact us directly at <a href="mailto:info@fitbyjonetics.com">info@fitbyjonetics.com</a>.</p>
+        </div>
+
+        <!-- Information Section -->
+        <div class="info-section">
+            <h2>📋 What You Need to Know</h2>
+            <ul>
+                <li><strong>Processing Time:</strong> Requests are processed within 7 business days</li>
+                <li><strong>Verification:</strong> We may need to verify your identity before processing</li>
+                <li><strong>Permanent:</strong> Once deleted, your data cannot be recovered</li>
+                <li><strong>Partial Deletion:</strong> You can request deletion of specific data types</li>
+                <li><strong>Account Impact:</strong> Deleting all data will also delete your account</li>
+            </ul>
+        </div>
+
+        <!-- Data Types Section -->
+        <div class="data-types">
+            <h3>🗂️ Types of Data We Store</h3>
+            <p>You can request deletion of any or all of the following data types:</p>
+            <ul>
+                <li><strong>Account Information:</strong> Name, email, profile details</li>
+                <li><strong>Fitness Data:</strong> Workout logs, exercise history, progress tracking</li>
+                <li><strong>Nutrition Data:</strong> Meal logs, food entries, nutrition tracking</li>
+                <li><strong>Health Metrics:</strong> Weight, measurements, step counts</li>
+                <li><strong>App Usage:</strong> Activity logs, preferences, settings</li>
+                <li><strong>Communication:</strong> Support messages, feedback submissions</li>
+            </ul>
+        </div>
+
+        <!-- Deletion Form -->
+        <div class="form-section">
+            <h2>📝 Data Deletion Request Form</h2>
+            <p>Please fill out the form below to request deletion of your personal data. All fields marked with <span class="required">*</span> are required.</p>
+            
+            <form name="data-deletion-request" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" netlify>
+                <!-- Honeypot field for spam protection -->
+                <input type="hidden" name="bot-field" />
+                
+                <!-- Form fields -->
+                <div class="form-group">
+                    <label for="name">Full Name <span class="required">*</span></label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="account-email">Account Email (if different from above)</label>
+                    <input type="email" id="account-email" name="account-email" placeholder="The email associated with your Fit By Jonetics account">
+                </div>
+                
+                <div class="form-group">
+                    <label for="deletion-type">Type of Deletion Request <span class="required">*</span></label>
+                    <select id="deletion-type" name="deletion-type" required>
+                        <option value="">Select deletion type</option>
+                        <option value="complete">Complete Account Deletion</option>
+                        <option value="partial">Partial Data Deletion</option>
+                        <option value="specific">Specific Data Types Only</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="data-types">Specific Data Types to Delete (if partial deletion)</label>
+                    <select id="data-types" name="data-types" multiple>
+                        <option value="account">Account Information</option>
+                        <option value="fitness">Fitness Data</option>
+                        <option value="nutrition">Nutrition Data</option>
+                        <option value="health">Health Metrics</option>
+                        <option value="usage">App Usage Data</option>
+                        <option value="communication">Communication History</option>
+                    </select>
+                    <small>Hold Ctrl/Cmd to select multiple options</small>
+                </div>
+                
+                <div class="form-group">
+                    <label for="reason">Reason for Deletion Request</label>
+                    <select id="reason" name="reason">
+                        <option value="">Select reason (optional)</option>
+                        <option value="privacy">Privacy Concerns</option>
+                        <option value="no-longer-using">No Longer Using Service</option>
+                        <option value="data-accuracy">Data Accuracy Issues</option>
+                        <option value="legal">Legal Requirements</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="details">Additional Details</label>
+                    <textarea id="details" name="details" placeholder="Please provide any additional details about your deletion request, including specific data you want removed or any special circumstances..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="verification">Identity Verification</label>
+                    <input type="text" id="verification" name="verification" placeholder="Please provide your user ID or any other identifying information to help us locate your account">
+                </div>
+                
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" name="confirmation" required>
+                        I understand that this deletion request is permanent and cannot be undone. <span class="required">*</span>
+                    </label>
+                </div>
+                
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" name="email-confirmation" required>
+                        I consent to receiving email confirmations about this deletion request. <span class="required">*</span>
+                    </label>
+                </div>
+                
+                <button type="submit" class="btn" id="submit-btn">Submit Deletion Request</button>
+            </form>
+        </div>
+
+        <!-- Processing Information -->
+        <div class="processing-info">
+            <h3>⏱️ Processing Timeline</h3>
+            <p><strong>Step 1:</strong> Email confirmation within 24 hours</p>
+            <p><strong>Step 2:</strong> Identity verification (if required)</p>
+            <p><strong>Step 3:</strong> Data deletion within 7 business days</p>
+            <p><strong>Step 4:</strong> Final confirmation email</p>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="contact-info">
+            <h3>📞 Need Help?</h3>
+            <p>If you have questions about the deletion process or need assistance, please contact us:</p>
+            <p>
+                <strong>Email:</strong> <a href="mailto:info@fitbyjonetics.com">info@fitbyjonetics.com</a><br>
+                <strong>Subject:</strong> Data Deletion Request
+            </p>
+            <p><a href="/contact">Visit our contact page</a> for more ways to get in touch.</p>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>&copy; 2025 Fit By Jonetics. All rights reserved.</p>
+            <p><a href="/privacy">Privacy Policy</a> | <a href="/terms">Terms of Service</a></p>
+        </div>
+    </div>
+
+    <script>
+        // Handle form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('submit-btn');
+            const confirmation = document.getElementById('confirmation');
+            const error = document.getElementById('error');
+            
+            // Show loading state
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Submitting...';
+            
+            // Hide previous messages
+            confirmation.style.display = 'none';
+            error.style.display = 'none';
+            
+            // Submit form
+            const formData = new FormData(this);
+            
+            fetch('/', {
+                method: 'POST',
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: new URLSearchParams(formData).toString()
+            })
+            .then(response => {
+                if (response.ok) {
+                    confirmation.style.display = 'block';
+                    this.reset();
+                } else {
+                    throw new Error('Submission failed');
+                }
+            })
+            .catch(err => {
+                error.style.display = 'block';
+            })
+            .finally(() => {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Submit Deletion Request';
+            });
+        });
+        
+        // Show/hide data types field based on deletion type
+        document.getElementById('deletion-type').addEventListener('change', function() {
+            const dataTypesField = document.getElementById('data-types').parentElement;
+            if (this.value === 'partial' || this.value === 'specific') {
+                dataTypesField.style.display = 'block';
+            } else {
+                dataTypesField.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
